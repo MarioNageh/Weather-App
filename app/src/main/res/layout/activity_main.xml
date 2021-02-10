@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:forceDarkAllowed="false"
+
+
+    tools:context=".views.activities.MainActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_wave_night"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rv_weather_props"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_max_temp"
+            style="@style/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="26°"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_castel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_castel"
+            app:layout_constraintVertical_bias="0.68" />
+
+        <TextView
+            android:id="@+id/txt_min_temp"
+            style="@style/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="15°"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/img_castel"
+            app:layout_constraintEnd_toStartOf="@id/img_arrow_down"
+            app:layout_constraintTop_toTopOf="@id/img_castel"
+            app:layout_constraintVertical_bias="0.68" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            style="@style/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clouds"
+            android:textSize="24sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/txt_max_temp"
+            app:layout_constraintEnd_toStartOf="@id/txt_min_temp"
+            app:layout_constraintStart_toEndOf="@id/txt_max_temp" />
+
+        <!--    Mim Temp-->
+        <TextView
+            android:id="@+id/txt_temp"
+            style="@style/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text=" 27°"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toTopOf="@id/txt_description"
+            app:layout_constraintEnd_toEndOf="@id/txt_description"
+            app:layout_constraintStart_toStartOf="@id/txt_description"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/txt_min_temp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txt_min_temp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_castel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="45dp"
+            android:alpha=".2"
+            android:src="@drawable/ic_home_night_sv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".50" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clouds"
+            app:layout_constraintBottom_toBottomOf="@id/img_castel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_castel"
+            app:layout_constraintVertical_bias=".2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cloud_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clouds"
+            app:layout_constraintBottom_toBottomOf="@id/img_castel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/img_castel"
+            app:layout_constraintVertical_bias=".1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/txt_max_temp"
+            app:layout_constraintStart_toEndOf="@id/txt_max_temp"
+            app:layout_constraintTop_toTopOf="@id/txt_max_temp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_weather_props"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/body"
+        tools:itemCount="3"
+        tools:listitem="@layout/rv_weather_item" />
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

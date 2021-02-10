@@ -1,0 +1,20 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#162840</item>
+        <item name="colorPrimaryDark">#162840</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--        For Not resize Screen       -->
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <style name="header">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/futura_light_bt</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+</resources>

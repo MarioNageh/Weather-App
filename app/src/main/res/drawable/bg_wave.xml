@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="600dp"
+    android:height="600dp"
+    android:viewportWidth="600"
+    android:viewportHeight="600">
+    <path
+        android:fillColor="#fff"
+        android:strokeWidth="1"
+
+        android:pathData="M0 00L600 00L600 579.0C588.33 543.94 484.58 542.69 386.25 576.02C287.91 609.35 179.17 605.6 0 564.77L0 00Z" />
+<!--        start from 0 600 600 580-->
+
+</vector>

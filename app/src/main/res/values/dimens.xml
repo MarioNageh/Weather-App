@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_spacing">8dp</dimen>
+    <dimen name="default_spacing_two">16dp</dimen>
+    <dimen name="default_spacing_fourth">32dp</dimen>
+    <dimen name="base_icon_size">24dp</dimen>
+</resources>

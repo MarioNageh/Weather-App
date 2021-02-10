@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="celsius">°</string>
+    <string name="you_don_t_have_internet_connection">You Don\'t Have Internet Connection</string>
+    <string name="retry_again">Retry Again</string>
+    <string name="gps_network_not_enabled">GPS Not Enabled You Must Enable It</string>
+    <string name="open_location_settings">Settings</string>
+    <string name="permission_needed">Permission Needed</string>
+    <string name="we_need_permission_to_location">We Need Location Permission To Get Data Direct To Your Location</string>
+    <string name="city_name_here">City Name Here</string>
+    <string name="error">Error</string>
+</resources>
